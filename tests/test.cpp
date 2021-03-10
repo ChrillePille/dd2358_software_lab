@@ -173,7 +173,7 @@ TEST(AppTest, DISABLED_BLASTest3) {
 
     //Compute
     my_blas_matmul(smallDIM, *c, *a, *b);
-    
+
     // Assert
     for (int i = 0; i < smallDIM; i++) {
         for (int j = 0; j < smallDIM; j++) {

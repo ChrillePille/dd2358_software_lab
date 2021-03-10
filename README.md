@@ -25,3 +25,13 @@ which build the whole project, and we can build the tests by invoking:
 $ make check
 ```
 For more verbose test output, run the `func_test` executable in `tests/`.
+
+## Exercise 3
+Install openblas with
+```
+$ sudo apt-get install libopenblas-dev
+```
+To run the test suite, run the `func_test` executable in `tests/` with the `--gtest_also_run_disabled_tests` option enabled:
+```
+$ ./tests/func_test --gtest_also_run_disabled_tests
+```
