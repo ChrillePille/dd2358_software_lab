@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <sys/time.h>
 #include <string.h>
+#include <math.h>
 #include "cwblas.h"
 
 extern "C" {
@@ -30,13 +31,20 @@ int main(int argc, char **argv)
   //float *B = (float *) malloc( m * m * sizeof(float));
   //float *C = (float *) malloc( m * m * sizeof(float));
   
-  float A[m][m];
-  float B[m][m];
-  float C[m][m] = {};
+  float** A = new float*[m];
+  float** B = new float*[m];
+  float** C = new float*[m];
+  for (int i = 0; i < m; i++) {
+    A[i] = new float[m];
+    B[i] = new float[m];
+    C[i] = new float[m];
+  }
+
   for (int i = 0; i < m; i++) {
     for (int j = 0; j < m; j++) {
       A[i][j] = 1.0f;
       B[i][j] = 2.0f;
+      C[i][j] = 0.0f;
     }
   }
   
@@ -47,10 +55,10 @@ int main(int argc, char **argv)
     my_blas_matmul(m, *C, *A, *B);
   t = gettime() - t;
 
-  printf("%d\t%f\t%E\n", m, t, (100 * 2 * m * m * m) / t);
+  printf("%d\t%f\t%E\n", m, t, 100 * 2 * pow(m, 3) / t);
 
-  //free(*A);
-  //free(*B);
-  //free(*C);
+  delete[] A;
+  delete[] B;
+  delete[] C;
   return 0;
 }
