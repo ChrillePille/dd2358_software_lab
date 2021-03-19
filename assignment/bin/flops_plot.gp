@@ -4,7 +4,7 @@ set terminal png
 set autoscale
 set output "flops_plot.png"
 set xlabel "matrix size (n*n)"
-set ylabel "execution time (s)"
+set ylabel "Flops/s"
 set title "Intel Core i7-8750H"
 set border 3 lw 1
 set tics nomirror
