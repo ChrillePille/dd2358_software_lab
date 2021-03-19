@@ -26,6 +26,7 @@ int main(int argc, char **argv)
   }
   
   const int m = atoi(argv[1]);
+  const int select = atoi(argv[2]);
 
   //float *A = (float *) malloc( m * m * sizeof(float));
   //float *B = (float *) malloc( m * m * sizeof(float));
@@ -49,10 +50,13 @@ int main(int argc, char **argv)
   }
   
   double t = gettime();
-  for (int i = 0; i < 100; i++)
-    // select which function to use
-    //c_mat_mul(m, C, A, B);
-    my_blas_matmul(m, *C, *A, *B);
+  for (int i = 0; i < 100; i++) {
+    if (select == 1) {
+      c_mat_mul(m, *C, *A, *B);
+    } else {
+      my_blas_matmul(m, *C, *A, *B);
+    }
+  }
   t = gettime() - t;
 
   printf("%d\t%f\t%E\n", m, t, 100 * 2 * pow(m, 3) / t);

@@ -97,7 +97,7 @@ TEST(AppTest, NaiveTest3) {
     }
 }
 
-TEST(AppTest, DISABLED_BLASTest1) {
+TEST(AppTest, BLASTest1) {
     float a[smallDIM][smallDIM];
     float b[smallDIM][smallDIM];
     float c[smallDIM][smallDIM] = {};
@@ -124,7 +124,7 @@ TEST(AppTest, DISABLED_BLASTest1) {
     }
 }
 
-TEST(AppTest, DISABLED_BLASTest2) {
+TEST(AppTest, BLASTest2) {
     // Init
     float a[bigDIM][bigDIM] = {};
     float b[bigDIM][bigDIM];
@@ -149,7 +149,7 @@ TEST(AppTest, DISABLED_BLASTest2) {
     }
 }
 
-TEST(AppTest, DISABLED_BLASTest3) {
+TEST(AppTest, BLASTest3) {
     // Init
     float a[smallDIM][smallDIM] = {{4.0f, 5.0f, 2.0f, 6.0f, 4.0f}, 
                                    {3.0f, 1.0f, 3.0f, -8.0f, 2.0f}, 
