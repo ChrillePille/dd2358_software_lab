@@ -43,10 +43,7 @@ Install openblas with
 ```
 $ sudo apt-get install libopenblas-dev
 ```
-To run the test suite, run the `func_test` executable in `tests/` with the `--gtest_also_run_disabled_tests` option enabled:
-```
-$ ./tests/func_test --gtest_also_run_disabled_tests
-```
+To run the test suite, run the `func_test` executable in `tests/`
 
 To run the experiment, run the following in the `assignment/` directory: 
 ```
@@ -58,6 +55,5 @@ $ cd bin
 $ gnuplot exec_time_plot.gp
 $ gnuplot flops_plot.gp
 ```
-
 
 ## Exercise 4
