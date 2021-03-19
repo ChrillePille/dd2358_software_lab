@@ -5,7 +5,7 @@ I built this system on WSL using autotools, installed with the command:
 $ sudo apt-get install build-essential autoconf autoconf-archive autotools-dev cmake pkg-config
 ```
 
-Make sure to install dependencies also:
+**Make sure to install dependencies also:**
 ```
 $ sudo apt-get install libopenblas-dev libgtest-dev libgmock-dev gnuplot-qt
 ```
@@ -58,6 +58,8 @@ $ gnuplot flops_plot.gp
 Remember to wipe the .dat-files when running a new experiment, as old data will remain otherwise.
 
 ## Exercise 4
+**Make sure to install docker as shown in the tutorial, as that is what is assumed to be the case here.**
+
 To build the docker image, do:
 ```
 $ sudo docker build -t cwsoftwarelab:0.5 .
