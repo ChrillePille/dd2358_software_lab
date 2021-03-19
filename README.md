@@ -55,5 +55,16 @@ $ cd bin
 $ gnuplot exec_time_plot.gp
 $ gnuplot flops_plot.gp
 ```
+Remember to wipe the .dat-files when running a new experiment, as old data will remain otherwise.
 
 ## Exercise 4
+To build the docker image, do:
+```
+$ sudo docker build -t cwsoftwarelab:0.5 .
+```
+
+To then run the image in a container, do:
+```
+$ sudo docker run -rm cwsoftwarelab:0.5
+```
+Running the image will run the tests and the experiment in exercise 3 at start, as per the `start.sh` script included in the base directory.
